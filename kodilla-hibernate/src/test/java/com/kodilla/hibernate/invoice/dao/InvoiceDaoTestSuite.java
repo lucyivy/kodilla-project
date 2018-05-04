@@ -30,9 +30,6 @@ public class InvoiceDaoTestSuite {
         Product productFlour = new Product("Flour");
         Product productBread = new Product("Bread");
 
-        productDao.save(productBread);
-        productDao.save(productFlour);
-
         Item item1 = new Item(new BigDecimal(8.9), 2);
         Item item2 = new Item(new BigDecimal(4.1), 10);
 
@@ -64,7 +61,7 @@ public class InvoiceDaoTestSuite {
 
         //Clean up
         try {
-            itemDao.deleteAll();
+            invoiceDao.deleteAll();
         } catch (Exception e) {
             System.out.println("############## there was an exception: " + e);
         }
